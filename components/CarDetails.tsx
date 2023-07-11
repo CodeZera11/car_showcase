@@ -1,6 +1,7 @@
 'use client'
 
 import { CarProps } from "@/types";
+import { generateCarUrl } from "@/utils";
 import { Dialog, Transition } from '@headlessui/react'
 import Image from "next/image";
 import { Fragment } from 'react'
@@ -45,17 +46,17 @@ const CarDetails = ({ isOpen, closeModal, car }: carDetailsProps) => {
                                     </button>
                                     <div className="flex-1 flex flex-col gap-3">
                                         <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg">
-                                            <Image src='/hero.png' alt="car" fill className="object-contain" priority />
+                                            <Image src={generateCarUrl(car)} alt="car" fill className="object-contain" priority />
                                         </div>
                                         <div className="flex gap-3">
                                             <div className="flex-1 relative w-full h-24 bg-primary-blue-100">
-                                                <Image src='/hero.png' fill priority alt="car-side" className="object-contain" />
+                                                <Image src={generateCarUrl(car, '29')} fill priority alt="car-side" className="object-contain" />
                                             </div>
                                             <div className="flex-1 relative w-full h-24 bg-primary-blue-100">
-                                                <Image src='/hero.png' fill priority alt="car-side" className="object-contain" />
+                                                <Image src={generateCarUrl(car, '33')} fill priority alt="car-side" className="object-contain" />
                                             </div>
                                             <div className="flex-1 relative w-full h-24 bg-primary-blue-100">
-                                                <Image src='/hero.png' fill priority alt="car-side" className="object-contain" />
+                                                <Image src={generateCarUrl(car, '13')} fill priority alt="car-side" className="object-contain" />
                                             </div>
                                         </div>
                                     </div>
