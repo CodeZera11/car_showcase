@@ -33,3 +33,11 @@ export interface CarProps {
     transmission: string;
     year: number;
 }
+
+export interface fetchCarsProps {
+    manufacturer: string,
+    year:number,
+    fuel:string,
+    limit:number,
+    model:string,
+}
