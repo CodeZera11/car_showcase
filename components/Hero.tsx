@@ -6,7 +6,7 @@ import CustomButton from "./CustomButton"
 const Hero = () => {
 
   const handleScroll = () => {
-
+    window.scrollTo({ top: 860, behavior: 'smooth' });
   }
 
   return (
